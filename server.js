@@ -17,13 +17,11 @@ if (process.env.NODE_ENV === "production") {
   });
 } else {
   app.get("/", (req, res) => {
-    res.send("api running");
+    res.send("api running!!!");
   });
 }
 
 app.use("/api/posts", postroute);
-
-
 
 app.listen(port, () => {
   console.log(`the server is running at ${port} port`);
